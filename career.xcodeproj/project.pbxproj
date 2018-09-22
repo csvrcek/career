@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */; };
-		DB75E5002156AA2E00D8F602 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FF2156AA2E00D8F602 /* ViewController.swift */; };
-		DB75E5032156AA2E00D8F602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5012156AA2E00D8F602 /* Main.storyboard */; };
+		DB75E5002156AA2E00D8F602 /* CareerFairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FF2156AA2E00D8F602 /* CareerFairViewController.swift */; };
 		DB75E5052156AA3000D8F602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5042156AA3000D8F602 /* Assets.xcassets */; };
 		DB75E5082156AA3000D8F602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5062156AA3000D8F602 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		DB75E4FA2156AA2E00D8F602 /* career.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = career.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB75E4FF2156AA2E00D8F602 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB75E5022156AA2E00D8F602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB75E4FF2156AA2E00D8F602 /* CareerFairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerFairViewController.swift; sourceTree = "<group>"; };
 		DB75E5042156AA3000D8F602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB75E5072156AA3000D8F602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB75E5092156AA3000D8F602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,13 +53,36 @@
 			isa = PBXGroup;
 			children = (
 				DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */,
-				DB75E4FF2156AA2E00D8F602 /* ViewController.swift */,
-				DB75E5012156AA2E00D8F602 /* Main.storyboard */,
+				DB75E5112156AB2600D8F602 /* Control */,
+				DB75E5102156AB2100D8F602 /* View */,
+				DB75E50F2156AB1500D8F602 /* Model */,
 				DB75E5042156AA3000D8F602 /* Assets.xcassets */,
 				DB75E5062156AA3000D8F602 /* LaunchScreen.storyboard */,
 				DB75E5092156AA3000D8F602 /* Info.plist */,
 			);
 			path = career;
+			sourceTree = "<group>";
+		};
+		DB75E50F2156AB1500D8F602 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB75E5102156AB2100D8F602 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB75E5112156AB2600D8F602 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				DB75E4FF2156AA2E00D8F602 /* CareerFairViewController.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +145,6 @@
 			files = (
 				DB75E5082156AA3000D8F602 /* LaunchScreen.storyboard in Resources */,
 				DB75E5052156AA3000D8F602 /* Assets.xcassets in Resources */,
-				DB75E5032156AA2E00D8F602 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB75E5002156AA2E00D8F602 /* ViewController.swift in Sources */,
+				DB75E5002156AA2E00D8F602 /* CareerFairViewController.swift in Sources */,
 				DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB75E5012156AA2E00D8F602 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB75E5022156AA2E00D8F602 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB75E5062156AA3000D8F602 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
