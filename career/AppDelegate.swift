@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = CareerFairViewController()
+        window?.rootViewController = UINavigationController(rootViewController: CareerFairTableViewController()) 
         window?.backgroundColor = UIColor.white
+        
+        FirebaseApp.configure()
         
         return true
     }
 }
-
