@@ -11,6 +11,10 @@ import Firebase
 import FirebaseDatabase
 
 class CareerFairTableViewController: UITableViewController {
+    
+    let fairs = Array<Fair>()
+    
+    let databaseRef = 
 
     override func viewDidLoad() {
         super.viewDidLoad()
