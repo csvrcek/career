@@ -8,14 +8,12 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
+
 
 class CareerFairTableViewController: UITableViewController {
     
     let fairs = Array<Fair>()
     
-    let databaseRef = 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -28,14 +26,14 @@ class CareerFairTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return fairs.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //navigationController?.pushViewController(CompanyTilesViewController(fair_in: fairs[indexPath]), animated: true)
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     

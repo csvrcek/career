@@ -15,6 +15,7 @@
 		DB75E5132156BB9D00D8F602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5122156BB9D00D8F602 /* GoogleService-Info.plist */; };
 		DB75E5152156D2FB00D8F602 /* Fair.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5142156D2FB00D8F602 /* Fair.swift */; };
 		DB75E5172156D6CA00D8F602 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5162156D6CA00D8F602 /* Company.swift */; };
+		DB75E5192156E1D300D8F602 /* CompanyTilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5182156E1D300D8F602 /* CompanyTilesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DB75E5122156BB9D00D8F602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB75E5142156D2FB00D8F602 /* Fair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fair.swift; sourceTree = "<group>"; };
 		DB75E5162156D6CA00D8F602 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		DB75E5182156E1D300D8F602 /* CompanyTilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTilesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */,
+				DB75E5182156E1D300D8F602 /* CompanyTilesViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -194,13 +197,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-career/Pods-career-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -237,6 +252,7 @@
 				DB75E5002156AA2E00D8F602 /* CareerFairTableViewController.swift in Sources */,
 				DB75E5152156D2FB00D8F602 /* Fair.swift in Sources */,
 				DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */,
+				DB75E5192156E1D300D8F602 /* CompanyTilesViewController.swift in Sources */,
 				DB75E5172156D6CA00D8F602 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
