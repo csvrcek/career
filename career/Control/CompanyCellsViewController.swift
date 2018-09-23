@@ -81,7 +81,7 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
-        collectionView.backgroundColor = UIColor.orange
+        collectionView.backgroundColor = UIColor.red
         
         view.addSubview(collectionView)
     }
