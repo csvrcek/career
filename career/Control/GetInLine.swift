@@ -17,9 +17,8 @@ class GetInLine: UIViewController {
     
     var docReg: DocumentReference?
     
-    init(company: Company, colRef: CollectionReference, compIndex: Int) {
+    init(company: Company, compIndex: Int) {
         self.company = company
-        self.colRef = colRef
         self.compIndex = compIndex
         super.init(nibName: nil, bundle: nil)
     }
