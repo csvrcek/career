@@ -16,13 +16,14 @@ class CompanyCell: UICollectionViewCell {
         name.textAlignment = .center
         name.font = UIFont(name: "Helvetica-Bold", size: 32)
         name.translatesAutoresizingMaskIntoConstraints = false
+        name.numberOfLines = 2
         return name
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpContentView()
-        contentView.backgroundColor = UIColor.blue
+        contentView.backgroundColor = UIColor.orange
     }
     
     required init?(coder aDecoder: NSCoder) {
