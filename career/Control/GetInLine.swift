@@ -12,7 +12,7 @@ import Firebase
 class GetInLine: UIViewController {
     
     var company: Company
-    var colRef = Firestore.firestore().collection("/CareerFair").document("/r1i802xAhNxJg7BrdYbu").collection("/Company").document("/GO6aFoYK5VQLrzGeBLrE").collection("/Queue").document("/vETzHjhIQesVrRgtgAMP").collection("/User")
+    var colRef = Firestore.firestore().collection("/CareerFair/r1i802xAhNxJg7BrdYbu/Company/GO6aFoYK5VQLrzGeBLrE/Queue/vETzHjhIQesVrRgtgAMP/User")
     var compIndex: Int
     
     var docReg: DocumentReference?
@@ -40,6 +40,7 @@ class GetInLine: UIViewController {
         let number = UITextField()
         number.textColor = UIColor.white
         number.attributedPlaceholder = NSAttributedString(string: "Enter Phone Number", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Helvetica-Bold", size: 24)!])
+        number.font = UIFont(name: "Helvetica-Bold", size: 24)
         number.textAlignment = .center
         
         number.layer.borderWidth = 3.0
@@ -102,7 +103,7 @@ class GetInLine: UIViewController {
         }
         
         self.phoneNumberField.text = ""
-        self.phoneNumberField.placeholder = "Successfully added to queue."
+        self.phoneNumberField.attributedPlaceholder = NSAttributedString(string: "Successfully added to queue.", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Helvetica-Bold", size: 18)!])
     
     }
     
