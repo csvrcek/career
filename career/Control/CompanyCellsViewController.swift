@@ -34,16 +34,6 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         
         setupCollectionView()
         
-//        let company = Company()
-//        company.name = "0"
-//        let company2 = Company()
-//        company.name = "1"
-//        let company3 = Company()
-//        company.name = "2"
-//        let company4 = Company()
-//        company.name = "3"
-//        fair.companies = [company, company2, company3, company4]
-        
         setupNavigation()
         //setupRefresh()
 
@@ -64,23 +54,26 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     @objc func fetchDocuments() {
-        colRef.getDocuments { (querySnapshot, error) in
-            if error != nil {
-                print("Error fetching documents")
-            } else {
-                for documents in querySnapshot!.documents {
-                    let docData = documents.data()
-                    let name = docData["companyName"] as! String
-                    print("name = \(name)")
-                    let newCompany = Company()
-                    newCompany.name = name
-                    self.fair.companies.append(newCompany)
-                }
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+        if fair.companies.isEmpty {
+            colRef.getDocuments { (querySnapshot, error) in
+                if error != nil {
+                    print("Error fetching documents")
+                } else {
+                    for documents in querySnapshot!.documents {
+                        let docData = documents.data()
+                        let name = docData["companyName"] as! String
+                        print("name = \(name)")
+                        let newCompany = Company()
+                        newCompany.name = name
+                        self.fair.companies.append(newCompany)
+                    }
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
                 }
             }
         }
+        
     }
     
     func setupCollectionView() {
