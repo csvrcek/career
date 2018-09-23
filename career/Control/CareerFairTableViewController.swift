@@ -21,7 +21,7 @@ class CareerFairTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.orange
         setupNavigation()
         //setupRefresh()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: fairID)
@@ -81,6 +81,9 @@ class CareerFairTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: fairID, for: indexPath)
         let fair = fairs[indexPath.row]
         cell.textLabel?.text = fair.name
+        cell.backgroundColor = .orange
+        cell.textLabel?.textColor = .white
+
         
         print("indexPath.row = \(indexPath.row)")
         

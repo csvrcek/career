@@ -22,7 +22,7 @@ class CompanyCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpContentView()
-        contentView.backgroundColor = UIColor.blue
+        contentView.backgroundColor = UIColor.orange
     }
     
     required init?(coder aDecoder: NSCoder) {

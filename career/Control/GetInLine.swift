@@ -39,7 +39,7 @@ class GetInLine: UIViewController {
     lazy var phoneNumberField: UITextField = {
         let number = UITextField()
         number.textColor = UIColor.white
-        number.attributedPlaceholder = NSAttributedString(string: "Enter Phone Number", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Helvetica-Bold", size: 24)!])
+        number.attributedPlaceholder = NSAttributedString(string: "Enter Phone Number", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 24)!])
         number.textAlignment = .center
         
         number.layer.borderWidth = 3.0

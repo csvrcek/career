@@ -86,7 +86,7 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
-        collectionView.backgroundColor = UIColor.red
+        collectionView.backgroundColor = UIColor.orange
         
         view.addSubview(collectionView)
     }
@@ -99,6 +99,13 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CompanyCell
         cell.nameLabel.text = fair.companies[indexPath.item].name
+        
+        
+        // Adding rounded corners
+        cell.contentView.layer.cornerRadius = 7.0
+        cell.contentView.layer.borderWidth = 3.0
+        cell.contentView.layer.borderColor = UIColor.white.cgColor
+        cell.contentView.layer.masksToBounds = true
         
         return cell
     }
