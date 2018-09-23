@@ -68,16 +68,7 @@ class CareerFairTableViewController: UITableViewController {
         return fairs.count
     }
     
-    func printFairs() {
-        print("fairs = ")
-        for i in fairs {
-            print("\(i.name), ")
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        printFairs()
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
         navigationController?.pushViewController(CompanyCellsViewController(fair_in: fairs[indexPath.row]), animated: true)
     }
     

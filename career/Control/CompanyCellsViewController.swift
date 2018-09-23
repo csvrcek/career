@@ -26,9 +26,6 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Color for testing
-        view.backgroundColor = UIColor.orange
-        
         
         let layout = UICollectionViewFlowLayout()
         
@@ -36,10 +33,17 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.backgroundColor = UIColor.orange
         
         let company = Company()
         company.name = "ally"
         fair.companies = [company]
+        
+        setupNavigation()
+    }
+    
+    func setupNavigation() {
+        navigationItem.title = "\(fair.name!)"
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,4 +57,11 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (fair.companies?.count)!
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let sideLength = (view.frame.width / 2) - 20
+        return CGSize(width: sideLength, height: sideLength)
+    }
+    
 }
