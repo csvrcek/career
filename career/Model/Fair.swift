@@ -10,5 +10,5 @@ import Foundation
 
 class Fair: NSObject {
     var name: String?
-    var companies: Array<Company>?
+    var companies = Array<Company>()
 }

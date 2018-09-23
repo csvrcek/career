@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let cellID = "cellID"
     
     var collectionView: UICollectionView!
+    
+    var colRef: CollectionReference!
+    
+    let refresh = UIRefreshControl()
     
     init(fair_in: Fair) {
         self.fair = fair_in
@@ -29,11 +34,53 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         
         setupCollectionView()
         
-        let company = Company()
-        company.name = "ally"
-        fair.companies = [company]
+//        let company = Company()
+//        company.name = "0"
+//        let company2 = Company()
+//        company.name = "1"
+//        let company3 = Company()
+//        company.name = "2"
+//        let company4 = Company()
+//        company.name = "3"
+//        fair.companies = [company, company2, company3, company4]
         
         setupNavigation()
+        //setupRefresh()
+
+        colRef = Firestore.firestore().collection("CareerFair/r1i802xAhNxJg7BrdYbu/Company")
+        fetchDocuments()
+    }
+    
+    // Setup refresh controller
+    func setupRefresh() {
+        // Add Refresh Control to CollectionView
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refresh
+        } else {
+            collectionView.addSubview(refresh)
+        }
+        
+        refresh.addTarget(self, action: #selector(fetchDocuments), for: .valueChanged)
+    }
+    
+    @objc func fetchDocuments() {
+        colRef.getDocuments { (querySnapshot, error) in
+            if error != nil {
+                print("Error fetching documents")
+            } else {
+                for documents in querySnapshot!.documents {
+                    let docData = documents.data()
+                    let name = docData["companyName"] as! String
+                    print("name = \(name)")
+                    let newCompany = Company()
+                    newCompany.name = name
+                    self.fair.companies.append(newCompany)
+                }
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
     }
     
     func setupCollectionView() {
@@ -53,13 +100,13 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CompanyCell
-        cell.nameLabel.text = fair.companies?[indexPath.item].name
+        cell.nameLabel.text = fair.companies[indexPath.item].name
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (fair.companies?.count)!
+        return fair.companies.count
     }
     
     

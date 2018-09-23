@@ -23,6 +23,7 @@ class CareerFairTableViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         setupNavigation()
+        //setupRefresh()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: fairID)
         
         // Firestore setup
