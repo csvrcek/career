@@ -73,12 +73,11 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
                 }
             }
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        navigationController?.pushViewController(GetInLine(company: (fair.companies?[indexPath.row])!), animated: true)
+        navigationController?.pushViewController(GetInLine(company: fair.companies[indexPath.row], colRef: colRef!, compIndex: indexPath.row), animated: true)
         
     }
     
