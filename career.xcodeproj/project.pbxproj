@@ -10,6 +10,8 @@
 		6057BFA6FA1E373CDDC5B2E2 /* Pods_career.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71003D5AA2E509D7537A47B /* Pods_career.framework */; };
 		B9D22F8C2156EF1700580FA5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D22F8B2156EF1700580FA5 /* Person.swift */; };
 		B9D22F8E2156FB7600580FA5 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D22F8D2156FB7600580FA5 /* CompanyCell.swift */; };
+		B9D22F92215752EC00580FA5 /* MyLineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D22F91215752EC00580FA5 /* MyLineController.swift */; };
+		B9D22F94215756B000580FA5 /* GetInLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D22F93215756B000580FA5 /* GetInLine.swift */; };
 		DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */; };
 		DB75E5002156AA2E00D8F602 /* CareerFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */; };
 		DB75E5052156AA3000D8F602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5042156AA3000D8F602 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		A71003D5AA2E509D7537A47B /* Pods_career.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_career.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D22F8B2156EF1700580FA5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B9D22F8D2156FB7600580FA5 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyCell.swift; path = career/Model/CompanyCell.swift; sourceTree = SOURCE_ROOT; };
+		B9D22F91215752EC00580FA5 /* MyLineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLineController.swift; sourceTree = "<group>"; };
+		B9D22F93215756B000580FA5 /* GetInLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInLine.swift; sourceTree = "<group>"; };
 		DB75E4FA2156AA2E00D8F602 /* career.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = career.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerFairTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			children = (
 				DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */,
 				DB75E5182156E1D300D8F602 /* CompanyCellsViewController.swift */,
+				B9D22F91215752EC00580FA5 /* MyLineController.swift */,
+				B9D22F93215756B000580FA5 /* GetInLine.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 				B9D22F8C2156EF1700580FA5 /* Person.swift in Sources */,
 				DB75E5002156AA2E00D8F602 /* CareerFairTableViewController.swift in Sources */,
 				DB75E5152156D2FB00D8F602 /* Fair.swift in Sources */,
+				B9D22F94215756B000580FA5 /* GetInLine.swift in Sources */,
+				B9D22F92215752EC00580FA5 /* MyLineController.swift in Sources */,
 				B9D22F8E2156FB7600580FA5 /* CompanyCell.swift in Sources */,
 				DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */,
 				DB75E5192156E1D300D8F602 /* CompanyCellsViewController.swift in Sources */,

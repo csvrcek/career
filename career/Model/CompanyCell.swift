@@ -38,4 +38,6 @@ class CompanyCell: UICollectionViewCell {
         nameLabel.heightAnchor.constraint(equalTo: self.contentView.heightAnchor).isActive = true
     }
     
+    
+    
 }
