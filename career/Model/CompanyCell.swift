@@ -16,6 +16,7 @@ class CompanyCell: UICollectionViewCell {
         name.textAlignment = .center
         name.font = UIFont(name: "Helvetica-Bold", size: 32)
         name.translatesAutoresizingMaskIntoConstraints = false
+        name.numberOfLines = 2
         return name
     }()
     
