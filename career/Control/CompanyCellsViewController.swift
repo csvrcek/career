@@ -8,8 +8,10 @@
 
 import UIKit
 
-class CompanyCellsViewController: UICollectionViewController {
+class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let cellID = "cellID"
+    
+    var collectionView: UICollectionView!
     
     init(fair_in: Fair) {
         self.fair = fair_in
@@ -24,20 +26,53 @@ class CompanyCellsViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Color for testing
-        view.backgroundColor = UIColor.orange
-        collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        setupCollectionView()
+        
         let company = Company()
         company.name = "ally"
         fair.companies = [company]
+        
+        setupNavigation()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func setupCollectionView() {
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.backgroundColor = UIColor.orange
+        
+        view.addSubview(collectionView)
+    }
+    
+    func setupNavigation() {
+        navigationItem.title = "\(fair.name!)"
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CompanyCell
         cell.nameLabel.text = fair.companies?[indexPath.item].name
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (fair.companies?.count)!
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let sideLength = (view.frame.width / 2) - 20
+        return CGSize(width: sideLength, height: sideLength)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+    }
 }
+
+
+
+
