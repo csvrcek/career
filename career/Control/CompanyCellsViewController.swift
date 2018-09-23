@@ -8,8 +8,10 @@
 
 import UIKit
 
-class CompanyCellsViewController: UICollectionViewController {
+class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let cellID = "cellID"
+    
+    var collectionView: UICollectionView!
     
     init(fair_in: Fair) {
         self.fair = fair_in
@@ -26,18 +28,29 @@ class CompanyCellsViewController: UICollectionViewController {
         super.viewDidLoad()
         // Color for testing
         view.backgroundColor = UIColor.orange
+        
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
         let company = Company()
         company.name = "ally"
         fair.companies = [company]
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CompanyCell
         cell.nameLabel.text = fair.companies?[indexPath.item].name
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (fair.companies?.count)!
     }
 }

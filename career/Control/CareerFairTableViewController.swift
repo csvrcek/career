@@ -77,7 +77,8 @@ class CareerFairTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         printFairs()
-        navigationController?.pushViewController(CompanyTilesViewController(fair_in: fairs[indexPath.row]), animated: true)
+        
+        navigationController?.pushViewController(CompanyCellsViewController(fair_in: fairs[indexPath.row]), animated: true)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
