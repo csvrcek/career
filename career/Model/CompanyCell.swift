@@ -12,16 +12,17 @@ class CompanyCell: UICollectionViewCell {
     
     let nameLabel: UILabel = {
         let name = UILabel()
-        
-        name.textColor = UIColor.blue
-        
+        name.textColor = UIColor.white
+        name.textAlignment = .center
+        name.font = UIFont(name: "Helvetica-Bold", size: 32)
+        name.translatesAutoresizingMaskIntoConstraints = false
         return name
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpContentView()
-        
+        contentView.backgroundColor = UIColor.blue
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,8 +32,7 @@ class CompanyCell: UICollectionViewCell {
     func setUpContentView() {
         contentView.addSubview(nameLabel)
         
-        nameLabel.center.x = contentView.center.x
-        nameLabel.center.y = contentView.center.y
+        nameLabel.center = contentView.center
         
         nameLabel.widthAnchor.constraint(equalTo: self.contentView.widthAnchor).isActive = true
         nameLabel.heightAnchor.constraint(equalTo: self.contentView.heightAnchor).isActive = true

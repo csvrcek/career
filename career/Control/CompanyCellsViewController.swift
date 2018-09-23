@@ -27,19 +27,23 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = UICollectionViewFlowLayout()
-        
-        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
-        collectionView.backgroundColor = UIColor.orange
+        setupCollectionView()
         
         let company = Company()
         company.name = "ally"
         fair.companies = [company]
         
         setupNavigation()
+    }
+    
+    func setupCollectionView() {
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CompanyCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.backgroundColor = UIColor.orange
+        
+        view.addSubview(collectionView)
     }
     
     func setupNavigation() {
@@ -64,4 +68,11 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         return CGSize(width: sideLength, height: sideLength)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+    }
 }
+
+
+
+
