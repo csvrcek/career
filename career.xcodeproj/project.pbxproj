@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6057BFA6FA1E373CDDC5B2E2 /* Pods_career.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71003D5AA2E509D7537A47B /* Pods_career.framework */; };
+		B9D22F8C2156EF1700580FA5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D22F8B2156EF1700580FA5 /* Person.swift */; };
+		B9D22F8E2156FB7600580FA5 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D22F8D2156FB7600580FA5 /* CompanyCell.swift */; };
 		DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */; };
 		DB75E5002156AA2E00D8F602 /* CareerFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */; };
 		DB75E5052156AA3000D8F602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5042156AA3000D8F602 /* Assets.xcassets */; };
@@ -15,13 +17,15 @@
 		DB75E5132156BB9D00D8F602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB75E5122156BB9D00D8F602 /* GoogleService-Info.plist */; };
 		DB75E5152156D2FB00D8F602 /* Fair.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5142156D2FB00D8F602 /* Fair.swift */; };
 		DB75E5172156D6CA00D8F602 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5162156D6CA00D8F602 /* Company.swift */; };
-		DB75E5192156E1D300D8F602 /* CompanyTilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5182156E1D300D8F602 /* CompanyTilesViewController.swift */; };
+		DB75E5192156E1D300D8F602 /* CompanyCellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB75E5182156E1D300D8F602 /* CompanyCellsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00068708C88ABFA4458111F2 /* Pods-career.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-career.release.xcconfig"; path = "Pods/Target Support Files/Pods-career/Pods-career.release.xcconfig"; sourceTree = "<group>"; };
 		1DC1A7A17C220093BA73ACA2 /* Pods-career.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-career.debug.xcconfig"; path = "Pods/Target Support Files/Pods-career/Pods-career.debug.xcconfig"; sourceTree = "<group>"; };
 		A71003D5AA2E509D7537A47B /* Pods_career.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_career.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D22F8B2156EF1700580FA5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B9D22F8D2156FB7600580FA5 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyCell.swift; path = career/Model/CompanyCell.swift; sourceTree = SOURCE_ROOT; };
 		DB75E4FA2156AA2E00D8F602 /* career.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = career.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB75E4FD2156AA2E00D8F602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerFairTableViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +35,7 @@
 		DB75E5122156BB9D00D8F602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB75E5142156D2FB00D8F602 /* Fair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fair.swift; sourceTree = "<group>"; };
 		DB75E5162156D6CA00D8F602 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		DB75E5182156E1D300D8F602 /* CompanyTilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTilesViewController.swift; sourceTree = "<group>"; };
+		DB75E5182156E1D300D8F602 /* CompanyCellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCellsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			children = (
 				DB75E5142156D2FB00D8F602 /* Fair.swift */,
 				DB75E5162156D6CA00D8F602 /* Company.swift */,
+				B9D22F8B2156EF1700580FA5 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		DB75E5102156AB2100D8F602 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B9D22F8D2156FB7600580FA5 /* CompanyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DB75E4FF2156AA2E00D8F602 /* CareerFairTableViewController.swift */,
-				DB75E5182156E1D300D8F602 /* CompanyTilesViewController.swift */,
+				DB75E5182156E1D300D8F602 /* CompanyCellsViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 				TargetAttributes = {
 					DB75E4F92156AA2E00D8F602 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -249,10 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D22F8C2156EF1700580FA5 /* Person.swift in Sources */,
 				DB75E5002156AA2E00D8F602 /* CareerFairTableViewController.swift in Sources */,
 				DB75E5152156D2FB00D8F602 /* Fair.swift in Sources */,
+				B9D22F8E2156FB7600580FA5 /* CompanyCell.swift in Sources */,
 				DB75E4FE2156AA2E00D8F602 /* AppDelegate.swift in Sources */,
-				DB75E5192156E1D300D8F602 /* CompanyTilesViewController.swift in Sources */,
+				DB75E5192156E1D300D8F602 /* CompanyCellsViewController.swift in Sources */,
 				DB75E5172156D6CA00D8F602 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +408,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.connorsvrcek.career;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -418,7 +427,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.connorsvrcek.career;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

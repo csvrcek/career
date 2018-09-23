@@ -2,8 +2,8 @@
 //  Fair.swift
 //  career
 //
-//  Created by Connor Svrcek on 9/22/18.
-//  Copyright © 2018 Connor Svrcek. All rights reserved.
+//  Created by Julian Shomali on 9/22/18.
+//  Copyright © 2018 Julian Shomali. All rights reserved.
 //
 
 import Foundation
