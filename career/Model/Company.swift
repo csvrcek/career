@@ -10,7 +10,7 @@ import Foundation
 
 class Company: NSObject {
     // TODO: jules
-    var names: String?
+    var name: String?
     var Queue = Array<Person>()
     
 }
