@@ -36,6 +36,12 @@ class CompanyCellsViewController: UIViewController, UICollectionViewDataSource, 
         setupNavigation()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        navigationController?.pushViewController(GetInLine(company: (fair.companies?[indexPath.row])!), animated: true)
+        
+    }
+    
     func setupCollectionView() {
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.delegate = self
